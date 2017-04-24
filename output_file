@@ -1,0 +1,37 @@
+
++BRAKEMAN REPORT+
+
+Application path: /Users/dominikbryant/Sites/Rails/rails-scaffold-app
+Rails version: 5.0.2
+Brakeman version: 3.6.1
+Started at 2017-04-24 18:50:11 +0200
+Duration: 0.124964 seconds
+Checks run: BasicAuth, BasicAuthTimingAttack, ContentTag, CreateWith, CrossSiteScripting, DefaultRoutes, Deserialize, DetailedExceptions, DigestDoS, DynamicFinders, EscapeFunction, Evaluation, Execute, FileAccess, FileDisclosure, FilterSkipping, ForgerySetting, HeaderDoS, I18nXSS, JRubyXML, JSONEncoding, JSONParsing, LinkTo, LinkToHref, MailTo, MassAssignment, MimeTypeDoS, ModelAttrAccessible, ModelAttributes, ModelSerialize, NestedAttributes, NestedAttributesBypass, NumberToCurrency, QuoteTableName, Redirect, RegexDoS, Render, RenderDoS, RenderInline, ResponseSplitting, RouteDoS, SQL, SQLCVEs, SSLVerify, SafeBufferManipulation, SanitizeMethods, SelectTag, SelectVulnerability, Send, SendFile, SessionManipulation, SessionSettings, SimpleFormat, SingleQuotes, SkipBeforeFilter, StripTags, SymbolDoSCVE, TranslateBug, UnsafeReflection, ValidationRegex, WithoutProtection, XMLDoS, YAMLParsing
+
+
++SUMMARY+
+
++-------------------+-------+
+| Scanned/Reported  | Total |
++-------------------+-------+
+| Controllers       | 2     |
+| Models            | 2     |
+| Templates         | 7     |
+| Errors            | 0     |
+| Security Warnings | 1 (1) |
++-------------------+-------+
+
++----------------------+-------+
+| Warning Type         | Total |
++----------------------+-------+
+| Cross Site Scripting | 1     |
++----------------------+-------+
+
+
+View Warnings:
+
++------------+-------------------------------------+----------------------+--------------------------------------------------------------------+
+| Confidence | Template                            | Warning Type         | Message                                                            |
++------------+-------------------------------------+----------------------+--------------------------------------------------------------------+
+| High       | posts/show (PostsController#create) | Cross Site Scripting | Unescaped model attribute near line 5: Post.new(post_params).title |
++------------+-------------------------------------+----------------------+--------------------------------------------------------------------+
