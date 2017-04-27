@@ -12,6 +12,8 @@ while [ "$count" -lt 20 ]; do
     sleep 1
 done
 
+bundle install
+
 cat >my-artifact.html <<EOF
 <html>
 <body>
